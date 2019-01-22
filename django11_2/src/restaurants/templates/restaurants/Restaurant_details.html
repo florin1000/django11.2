@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block head_title %} Restaurants list |{% endblock head_title %}
+
+{% block content %}
+    <p>Restaurant List</p>
+
+
+    {#    <ul class="list-group">#}
+    {#        {% for restaurant in restaurants_list %}#}
+    {#            <li class="list-group-item">#}
+    <ul class="list-group">
+        <li class="list-group-item"><span>Name :</span> {{ object.name }}</li>
+        <li class="list-group-item"><span>Location : </span> {{ object.location }}</li>
+        <li class="list-group-item"><span>Category : </span>{{ object.category }}</li>
+        <li class="list-group-item"><span>Created_at : </span>{{ object.timestamp }}</li>
+        <li class="list-group-item"><span>Updated_at : </span>{{ object.updated }}</li>
+    </ul>
+    {#            </li>#}
+    {#        {% endfor %}#}
+    {#    </ul>#}
+{% endblock content %}
