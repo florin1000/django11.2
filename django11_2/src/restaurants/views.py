@@ -17,6 +17,8 @@ def restaurant_listview(request):
 
 
 class RestaurantListView(ListView):
+    template_name = 'restaurants/Restaurantlocation.html'
+
     def get_queryset(self):
         slug = self.kwargs.get("slug")
         if slug:
