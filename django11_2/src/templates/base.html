@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>This is the base HTML</h1>
+<p>This is the First paragraph with the first variable {{ name }}</p>
+<p>The random number is {{ num }}</p>
+{% for name in names %}
+<p>the name is {{ name }}</p>
+{% endfor %}
+
+<p>This is verbatim text {% verbatim %} {{ var }} {% endverbatim %}</p>
+</body>
+</html>
