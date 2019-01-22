@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title>{% block head_title %} Test Application {% endblock head_title %}</title>
     {% include 'snippets/css.html' %}
+    <style>
+        .list-group span {
+            display: inline-block;
+            text-transform: capitalize;
+            font-weight: bold;
+            min-width: 150px;
+        }
+    </style>
 </head>
 <body>
 <div class="container">

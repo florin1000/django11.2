@@ -4,8 +4,17 @@ from django.http import HttpResponse
 from django.views import View
 from django.views.generic import TemplateView
 
+from .models import RestaurantLocation
+
 
 # Create your views here.
+def restaurant_listview(request):
+    template_name = 'restaurants/restaurants_list.html'
+    queryset = RestaurantLocation.objects.all()
+    context = {"restaurants_list": queryset}
+    return render(request, template_name, context)
+
+
 class HomeView(TemplateView):
     template_name = 'home.html'
 
