@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block head_title %} Home page {% endblock head_title %}
+{% block content %}
+<p>This is the First paragraph with the first variable {{ name }}</p>
+<p>The random number is {{ num }}</p>
+{% for name in names %}
+<p>the name is {{ name }}</p>
+{% endfor %}
+
+<p>This is verbatim text {% verbatim %} {{ var }} {% endverbatim %}</p>
+
+{% endblock content %}
+
