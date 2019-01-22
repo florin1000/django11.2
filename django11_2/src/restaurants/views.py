@@ -36,12 +36,6 @@ class RestaurantDetailView(DetailView):
     template_name = 'restaurants/Restaurant_details.html'
     queryset = RestaurantLocation.objects.all()
 
-    def get_context_data(self, *args, **kwargs):
-        print(self.kwargs)
-        context = super(RestaurantDetailView, self).get_context_data(*args, **kwargs)
-        print(context)
-        return context
-
     def get_object(self, *args, **kwargs):
         rest_id = self.kwargs.get('rest_id')
         obj = get_object_or_404(RestaurantLocation,
@@ -56,7 +50,7 @@ class HomeView(TemplateView):
     # https://reinout.vanrees.org/weblog/2014/05/19/context.html
     def get_context_data(self, *args, **kwargs):
         context = super(HomeView, self).get_context_data(*args, **kwargs)
-        surnames = ["JOhn", "Emil"]
+        surnames = ["John", "Emil"]
         context.update({"surnames": surnames})
         print(context)
         return context
