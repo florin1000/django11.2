@@ -22,7 +22,7 @@ class RestaurantLocation(models.Model):
 
 def rl_pre_save_receiver(sender, instance, *args, **kwargs):
     if not instance.slug:
-        instance.name = "new name"
+        instance.category = "food"
         instance.slug = unique_slug_generator(instance)
 
 

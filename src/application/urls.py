@@ -21,7 +21,7 @@ from restaurants.views import HomeView, RestaurantListView, RestaurantDetailView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', HomeView.as_view()),
-    url(r'^restaurants/$', RestaurantListView.as_view()),
+    # url(r'^restaurants/$', RestaurantListView.as_view()),
     # url(r'^restaurants/(?P<slug>\w+)/$', RestaurantListView.as_view()),
     url(r'^restaurants/(?P<rest_id>\w+)/$', RestaurantDetailView.as_view()),
     url(r'contact', TemplateView.as_view(template_name='contact.html')),
